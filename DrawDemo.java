@@ -113,4 +113,21 @@ public class DrawDemo
             pen.turn(-72);
         }
     }
+    
+    /**
+     * Dibuja un poligono regular segun "n" lados.
+     */
+    public void drawPoligon(int n)
+    {
+        Pen pen = new Pen(200, 200, myCanvas);
+        pen.setColor(Color.BLACK);
+        
+        int angulo = 360/n;
+        for (int i=0; i<n; i++) {
+            pen.move(100);
+            pen.turn(-angulo);
+        }
+    }
+    
+    
 }
