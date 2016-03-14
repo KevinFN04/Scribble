@@ -87,7 +87,7 @@ public class DrawDemo
     }
     
     /**
-     * Draw a triangle in the pen's color at the pen's location.
+     * Draw a triangle in the location.
      */
     public void drawTriangle(int x, int y)
     {
@@ -97,6 +97,20 @@ public class DrawDemo
         for (int i=0; i<3; i++) {
             pen.move(100);
             pen.turn(-120);
+        }
+    }
+    
+    /**
+     * Draw a pentagon in the location x, y.
+     */
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(200, 200, myCanvas);
+        pen.setColor(Color.ORANGE);
+
+        for (int i=0; i<5; i++) {
+            pen.move(100);
+            pen.turn(-72);
         }
     }
 }
