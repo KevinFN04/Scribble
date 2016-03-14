@@ -85,4 +85,18 @@ public class DrawDemo
     {
         myCanvas.erase();
     }
+    
+    /**
+     * Draw a triangle in the pen's color at the pen's location.
+     */
+    public void drawTriangle(int x, int y)
+    {
+        Pen pen = new Pen(x, y, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for (int i=0; i<3; i++) {
+            pen.move(100);
+            pen.turn(-120);
+        }
+    }
 }
